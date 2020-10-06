@@ -36,6 +36,16 @@ int main (){
 
   printf("Subtraction is:%d\n",min);
 
+ /* calling a function to get the multiplication*/
+  mult=multiply(a, b);
+
+  printf("Multiplication is:%d\n",min);
+
+ /* calling a function to get the Division*/
+  div=divide(a, b);
+
+  printf("Division is:%d\n",div);
+
   return 0;
 }
 
@@ -63,6 +73,29 @@ int minus (int num1, int num2)
   return result2;
 }
 
+/* Function returning the multiplication of two numbers*/
+int multiply (int num1, int num2)
+
+{ 
+  /*Local variable Declaration*/
+  int result3;
+
+  result3= num1 * num2;
+
+  return result3;
+}
+
+/* Function returning the division of two numbers*/
+int divide (int num1, int num2)
+
+{ 
+  /*Local variable Declaration*/
+  int result4;
+
+  result4= num1 / num2;
+
+  return result4;
+}
 
 
 
