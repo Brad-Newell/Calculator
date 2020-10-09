@@ -5,17 +5,19 @@
 int plus(int num1,int num2);
 int minus (int num1, int num2);
 int multiply (int num1, int num2);
-int divide (int num1, int num2);
+void divide (int num1, int num2, int *quotient, int *remainder);
 
 int main (){
 
   /* Local Variable Declaration*/
   int a;
   int b;
+  int q;
+  int r;
   int pl;
   int min;
   int mult;
-  int div;
+  
   
   printf ("Enter a value for a:");
   scanf("%d", &a);
@@ -43,9 +45,9 @@ int main (){
   printf("Multiplication is:%d\n",mult);
 
  /* calling a function to get the Division*/
-  div=divide(a, b);
+  divide(a, b,&q, &r);
 
-  printf("Division is:%d\n",div);
+  printf("Quotient is:%d\nRemainder is: %d\n", q,r);
 
   return 0;
 }
@@ -87,15 +89,18 @@ int multiply (int num1, int num2)
 }
 
 /* Function returning the division of two numbers*/
-int divide (int num1, int num2)
+void divide (int num1, int num2, int *quotient, int *remainder)
+
 
 { 
   /*Local variable Declaration*/
-  int result4;
+  
+  
+  *quotient = num1 / num2;
+  *remainder = num1 % num2;
 
-  result4= num1 / num2;
 
-  return result4;
+ 
 }
 
 
