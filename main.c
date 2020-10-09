@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /*Function Declaration*/
 int plus(int num1,int num2);
@@ -39,7 +40,7 @@ int main (){
  /* calling a function to get the multiplication*/
   mult=multiply(a, b);
 
-  printf("Multiplication is:%d\n",min);
+  printf("Multiplication is:%d\n",mult);
 
  /* calling a function to get the Division*/
   div=divide(a, b);
